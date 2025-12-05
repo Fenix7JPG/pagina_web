@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.menu_icon {
+    width: 30px;
+    height: 70px;
+    
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+@media (min-width: 1000px) {
+    .menu_icon {
+        display: none;
+    }
+}
+.menu_icon img {
+    width: 100%;               /* ACHICA la imagen */
+    height: 100%;
+    object-fit: contain;
+}
+.logo {
+    background-color: yellow;
+    width:70px;
+
+}
+.logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.menu {
+    padding: 10px;
+}
+
+.menubar {
+    background-color: aqua;
+    padding: 0%;
+    display: flex;
+    width: 100%;
+    height: 70px;
+}
