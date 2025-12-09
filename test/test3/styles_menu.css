@@ -1,0 +1,32 @@
+.menu_categories {
+    background-color: red;;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    flex-wrap: wrap; /* Permite que las categorías se ajusten a la siguiente línea si no caben en una sola */
+}
+.menu_categories a {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+.menu_categories a img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.menu_categories a span {
+    margin-bottom: 5px;
+    text-align: center;
+}
