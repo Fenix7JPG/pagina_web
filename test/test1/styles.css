@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #ddd;
+    padding: 0 20px;
+}
+
+
+.side {
+    background-color: #d24646;
+    width: 30px;
+    flex-shrink: 0;  /* No permite que se reduzca el ancho */
+    display: none;
+    margin: 5px;
+}
+img {
+    max-width: 100%;   /* No crece más que el contenedor en ancho */
+    max-height: 100%;  /* No crece más que el contenedor en alto */
+    object-fit: contain; /* Mantiene proporción sin recortar */
+    width: auto;       /* No escala horizontalmente si no es necesario */
+    height: auto;      /* No escala verticalmente si no es necesario */
+}
+.izq    { 
+    background: yellow; 
+    width: 70px;
+    flex-shrink: 0; /* No permite que se reduzca el ancho */
+}
+.centro { 
+
+    width: 400px; 
+    flex-shrink: 0;
+
+    display:flex;
+    gap: 30px;
+    justify-content: center;
+    justify-items: center;
+}
+.centro a{
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    height: 25px;
+    font-family: verdana;
+    font-size: 18px;
+}
+
+
+.centro button{
+    height: 30px;
+}
+
+
+.der    { 
+    background: green; 
+    width: 400px;
+    flex-shrink: 0; /* No permite que se reduzca el ancho */
+}
+
+.centro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 950px) {
+    .centro {
+        visibility: hidden;   /* Invisible pero ocupa espacio */ 
+        flex-shrink: 1; /* Permite que se reduzca el ancho */
+    }
+    .side {
+        display: flex;
+    }
+}

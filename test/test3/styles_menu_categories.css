@@ -1,0 +1,41 @@
+.menu_categories {
+    background: linear-gradient(to bottom, #eeeeee, #ffffff);
+    height: auto;
+    display: flex;
+    position: fixed;  /* Fija el div en la pantalla */
+    z-index: 1;
+    top: 80px;   
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+    flex-wrap: wrap; /* Permite que las categorías se ajusten a la siguiente línea si no caben en una sola */
+}
+.menu_categories a {
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.menu_categories a.active span {
+    color: red;
+    font-weight: bold;
+}
+
+
+.menu_categories a img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle;
+    margin: 5px;
+}
+
+.menu_categories a span {
+    margin-bottom: 5px;
+    text-align: center;
+}
