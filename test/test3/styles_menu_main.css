@@ -1,16 +1,21 @@
-* {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    height: 100%;
 }
 
+
 .contenedor {
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
     display: flex;
+    position: fixed;
+    top: 0; 
     align-items: center;
-    width: 100%;
+    width: 95%;
     height: 80px;
     padding: 0 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 0px;
 }
 
 
@@ -82,6 +87,7 @@ img {
 
 
 .menu_side {
+    z-index:2;
     background-color: rgb(229, 229, 229);
     width: 200px;
     height: 100vh;

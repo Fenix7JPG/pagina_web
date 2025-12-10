@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>waaa</title>
     <link rel="stylesheet" href="styles_menu_main.css">
+    <link rel="stylesheet" href="styles_order_tracking.css">
 </head>
 
 <body>
@@ -52,7 +53,39 @@
         <a class="options" href="#">Mis Pedidos</a> <br><br>
         <a class="options" href="#">Locales</a>
     </div>
-    <script src="script.js"></script>
+    <div style="height: 80px;"></div>
+
+    <div class="main_container">
+        <div class="order_tracking">
+            <img class="icon" src="../../assets/phone_icon.png">
+            <div class="form">
+                <span class="title">Sigue tu pedido</span>
+                <div class="inputs_blocks">
+                    
+                    <div class="input_block">
+                        <span>Escribe tu canal</span>
+                        <select class="dropdown_entry">
+                            <option value="" disabled selected>Selecciona una categoría</option>
+                            <option value="Pollo">Call Center</option>
+                            <option value="Pescado">Web</option>
+                        </select>
+                        
+                    </div>
+                    <div class="input_block">
+                        <span>Escribe el numero de pedido</span>
+                        <input class="entry"type="text" placeholder="N de pedido">
+
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script_menu_main.js"></script>
+    <script src="script_order_tracking.js"></script>
 </body>
 
 </html>
