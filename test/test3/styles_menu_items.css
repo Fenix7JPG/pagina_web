@@ -2,8 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
-#pollo,#guarniciones,#promociones,#bebidas,#extras {
-    scroll-margin-top: 120px; /* altura de tu menú fijo */
+
+
+#promociones,#pollo,#guarniciones,#bebidas,#extras {
+    scroll-margin-top: 100px;
 }
 
 .category {
@@ -16,6 +18,7 @@ html {
 }
 
 
+
 .menu_items {
     display: flex;
     flex-wrap: wrap;
@@ -23,6 +26,7 @@ html {
     justify-self: center;
     gap:10px;
     width: 900px;
+
 }
 
 
@@ -34,28 +38,36 @@ html {
     border-radius: 8px;
     width: clamp(150px, 19%, 240px);
     text-decoration: none;
-    color: black;
+
     font-family: Arial, sans-serif;
+    margin: 0px;
+
+    border: none;
 
 }
 
 @media (max-width: 1030px) {
     .menu_item {
-        width: clamp(225px, 25%, 300px);
+
+        width: clamp(125px, 30%, 400px);
     }
     .menu_items{
-        width: min(97%,695px);
+        width: min(94%,990px);
     }
     .category {
-        width: min(97%,695px);
+        width: min(94%,695px);
     }
 }
 @media (max-width: 735px) {
+    .menu_item {
+
+        width: clamp(100px,48%,305px);
+    }
     .menu_items{
-        width: min(97%,460px);
+        width: min(94%,560px);
     }
     .category {
-        width: min(97%,460px);
+        width: min(94%,460px);
     }
 }
 
