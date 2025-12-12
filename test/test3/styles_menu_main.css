@@ -5,7 +5,7 @@ html, body {
 }
 
 
-.contenedor {
+.menu_main {
     z-index: 1;
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -94,7 +94,6 @@ img {
     position: fixed;
     top: 0;
     left: -250px;
-    padding: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 
 
@@ -134,29 +133,31 @@ img {
     margin-bottom: 20px;
 }
 
-/* Estilizacion */
+
+
 .contact {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+
     height: 60px;
     cursor: pointer;
 }
 .contact img {
-    max-width: 20%;
+    width: 20px;
     margin:5px;
 }
+
 .account {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+
     height: 60px;
     cursor: pointer;
 }
 .account img {
-    max-width: 25%;
+    width: 20px;
     margin: 5px;
 }
 
@@ -165,11 +166,55 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
+
     height: 60px;
     cursor: pointer;
 }
 .cart img {
-    max-width: 30%;
+    width: 20px;
     margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .contact span,.account span,.cart span{
+        display: none;
+    }
+}
+
+
+.cart_side {
+    z-index:2;
+    background-color: rgb(0, 0, 0);
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+
+
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    right: -250px;
+
+    transition: 300ms ease;
+}
+
+.cart_side.show {
+    right: 0;
+}
+
+.cart_side_header {
+    background-color: red;
+    width: auto;
+    height: 50px;
+}
+
+
+.cart_item {
+    display: none;
+    background-color: green;
+    width: 100px;
+    height: 50px;
+}
+
+.cart_item.show {
+    display: block;
 }
