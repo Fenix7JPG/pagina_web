@@ -35,7 +35,7 @@
                 <img src="../../assets/user_icon.png" alt="user">
                 <span>Mi cuenta</span>
             </div>
-            <button class="cart" onclick="openCartSide()">
+            <button id="button_cart" class="cart" onclick="openCartSide()">
                 <img src="../../assets/cart_icon.png" alt="cart">
                 <span>Carrito</span>
             </button>
@@ -53,14 +53,95 @@
         <a class="options" href="#">Mis Pedidos</a> <br><br>
     </div>
 
-    <div id="cart_side" class="cart_side">
-        <div class="cart_side_header">
-            ELMENTO
+
+    <template id="cart_item">
+        <div class="cart_item">
+
+        
+            <div class="cart_item_x">
+                <button>
+                    <img src="../../assets/x_icon.png">
+                </button>
+            </div>
+            <div class="cart_item_info">
+                <div class="cart_item_img">
+                    <img src="">
+                </div>
+                
+                <span class="cart_item_title"></span>
+                
+            </div>
+            <span class="cart_item_price"></span>
+            <span class="cart_item_subtotal"></span>
+            <div class="cart_item_controls">
+                <button class="cart_button_minus"></button>
+                <span></span>
+                <button class="cart_button_plus"></button>
+            </div>
         </div>
-        <div id="1" class="cart_item">
-            xdad
+    </template>
+
+
+    <div id="container_cart_side" class="container_cart_side">
+        <div id="cart_side" class="cart_side">
+            <div class="cart_side_header">
+            
+            SALIR
+            </div>
+        <!--Templates...-->
+            <div class="cart_items">
+
+            </div>
+            <div class="cart_footer">
+                <div class="cart_total">
+                    <span>Total</span>
+                    <span id="cart_total_price">S/ 0.00</span>
+                </div>
+
+                <button id="btn_checkout" class="btn_checkout">
+                    Finalizar pedido
+                </button>
+            </div>
         </div>
     </div>
+    
+    <div id="container_checkout_modal" class="container_ckeckout_modal">
+
+    
+        <div id="checkout_modal" class="checkout_modal">
+            <label>
+            Tipo de entrega
+            <select id="order_type">
+                <option value="">Seleccionar</option>
+                <option value="delivery">Delivery</option>
+                <option value="recojo">Recojo en tienda</option>
+            </select>
+            </label>
+
+            <label> 
+                Dirección 
+               
+            <input type="text" id="address_input" placeholder="Ej: Av. Arequipa 123, Cercado de Lima">
+
+
+            </label>
+
+            <label>
+            Método de pago
+            <select id="payment_method">
+                <option value="">Seleccionar</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="yape">Yape</option>
+                <option value="plin">Plin</option>
+            </select>
+            </label>
+
+            <button id="btn_finalizar_pedido">Finalizar pedido</button>
+        </div>
+    </div>
+
+
+
 
     <div class="container_menu_categories">
 
@@ -102,105 +183,26 @@
     <div style="height: 80px;"></div>
 
 
-    
+    <template id="menu_item">
+        <button class="menu_item">
+            <div class="menu_item_img">
+                <img src="" alt="">
+            </div>
+            <h2></h2>
+            <p></p>
+            <span></span>
+        </button>
+    </template>
     <div class="menu_items">
         <section id="promociones">
             <h1 class="category">Promociones</h1>
-            <div class="menu_items">
-                
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span>$12.99</span>
-
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-
-            </div>
+            <div class="menu_items"></div>
         </section>
 
         <section id="pollo">
             <h1 class="category">Pollo</h1>
             <div class="menu_items">
-                <template id="menu_item">
-                    <button class="menu_item">
-                        <div class="menu_item_img">
-                        <img src="" alt="">
-                        </div>
-                        <h2></h2>
-                        <p></p>
-                        <span></span>
-                    </button>
-                </template>
+            
 
             </div>
 
@@ -208,170 +210,16 @@
         <section id="guarniciones">
             <h1 class="category">Guarniciones</h1>
             <div class="menu_items">
-                
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span>$12.99</span>
-
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
 
             </div>
 
         </section>
         
-
-
         <section id="bebidas">
             <h1 class="category">Bebidas</h1>
             <div class="menu_items">
                 
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span>$12.99</span>
 
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
 
             </div>
 
@@ -380,82 +228,7 @@
             <h1 class="category">Extras</h1>
             <div class="menu_items">
                 
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span>$12.99</span>
 
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
-                <div class="menu_item">
-                    <div class="menu_item_img">
-                        <img src="../../assets/pollo.jpg" alt="Pollo a la brasa">
-                    </div>
-                    <h2>Pollo a la brasa</h2>
-                    <p>Delicioso pollo a la brasa acompañado de papas fritas y ensalada.</p>
-                    <span class="price">$12.99</span>
-                </div>
 
             </div>
 
@@ -464,6 +237,7 @@
     
     <script src="script_menu_main.js"></script>
     <script src="script_menu_categories.js"></script>
+    <script src="script_menu_items.js"></script>
 </body>
 
 </html>
